@@ -1,7 +1,7 @@
 package com.example.CharCounter;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +20,7 @@ public class Controller {
      * @param inputText -  Your string witch need to divide by symbols and count each entry
      * @return String with all symbols in input string and their numbers of entry.
      */
-    @PostMapping()
+    @GetMapping()
     public String main(@RequestParam String inputText) {
         Map<Character, Integer> result = service.calculateChar(inputText);
         StringBuilder builder = new StringBuilder();
